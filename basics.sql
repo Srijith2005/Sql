@@ -1,0 +1,13 @@
+show databases;
+drop database college;
+show databases;
+CREATE database college;
+use college;
+create table dept(dept_id INT PRIMARY KEY,Name varchar(100),Hod varchar(100));
+Insert into dept values(1,'AI&DS',"Dr. Ram");
+select * FROM dept;
+update dept set Name = 'EEE' WHERE dept_id = 1;
+select * FROM dept;
+Insert into dept values(2,'CSE',"Dr. RaJ");
+select * FROM dept;
+select * FROM dept WHERE dept_id=2;
