@@ -1,0 +1,7 @@
+SELECT DISTINCT author_id as id
+FROM Views
+WHERE author_id = viewer_id
+ORDER BY author_id asc;
+
+#DISTINCT is used to remove duplicates
+#ORDER BY is used to sort asc refers to ascending order
