@@ -2,3 +2,5 @@ SELECT name
 FROM Customer
 WHERE  referee_id != 2 
 OR referee_id IS NULL;
+
+#IS NULL is used to deal with the null values
