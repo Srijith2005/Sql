@@ -1,0 +1,6 @@
+select E1.name as name
+from Employee E1
+left join Employee E2
+on E1.id = E2.managerId
+group by E1.id
+having count(*) >= 5;
