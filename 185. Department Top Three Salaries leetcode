@@ -1,0 +1,12 @@
+Select Department,Employee,Salary
+from
+(select D.name as Department,E.name as Employee,E.salary as Salary,
+dense_rank() over (partition by D.id  order by E.salary  desc) as rn
+from Employee E
+join Department D
+on E.departmentId = D.id)T
+where rn <= 3;
+
+
+
+#here 2 of them has same rank so we have to use dense_rank()
